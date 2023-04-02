@@ -8,7 +8,7 @@ int main() {
     getline(cin, exp);//считывание строки из потока 
     Stack s(exp.size()); 
     for (int i = exp.size() - 1; i >= 0; i--) {//проход по всей строке слева направо
-        if (isdigit(exp[i])) {//если число, то добавляем в стек
+        if (isdigit(exp[i])) {//если цифра, то добавляем в стек
             int num = 0;
             while (i >= 0 && isdigit(exp[i])) {
                 num = num * 10 + (exp[i] - '0');
