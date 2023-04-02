@@ -18,7 +18,7 @@ int main() {
             s.push(num);
            
         }
-        else if (exp[i] == ' ') {
+        else if (exp[i] == ' ') {//пропуск пробелов
             continue;
         }
         else {//если оператор, то извлекаем из стека два операнда
