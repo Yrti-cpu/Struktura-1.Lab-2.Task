@@ -72,7 +72,7 @@ Stack& Stack::operator=(const Stack& obj)
         return *this;
     top = obj.top;
     capacity = obj.capacity;
-    delete[] this->arr;
+    delete[] arr;
     arr = new short[obj.capacity] {0};
     for (int i = 0; i <= obj.top; i++)
     {
