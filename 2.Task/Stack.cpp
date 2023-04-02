@@ -70,13 +70,13 @@ Stack& Stack::operator=(const Stack& obj)
 {
     if (this == &obj)
         return *this;
-    this->top = obj.top;
-    this->capacity = obj.capacity;
+    top = obj.top;
+    capacity = obj.capacity;
     delete[] this->arr;
-    this->arr = new short[obj.capacity] {0};
+    arr = new short[obj.capacity] {0};
     for (int i = 0; i <= obj.top; i++)
     {
-        this->arr[i] = obj.arr[i];
+        arr[i] = obj.arr[i];
     }
 
     return *this;
