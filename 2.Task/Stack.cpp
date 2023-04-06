@@ -9,12 +9,12 @@ Stack::Stack(short capacity)
 
 Stack::Stack(const Stack& obj)
 {
-    this->arr = new short[obj.capacity] {};
-    this->top = obj.top;
-    this->capacity = obj.capacity;
+    arr = new short[obj.capacity] {};
+    top = obj.top;
+    capacity = obj.capacity;
     for (int i = 0; i <= obj.top; i++)
     {
-        this->arr[i] = obj.arr[i];
+        arr[i] = obj.arr[i];
     }
 }
 
