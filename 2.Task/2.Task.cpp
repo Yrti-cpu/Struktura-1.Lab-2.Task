@@ -10,10 +10,13 @@ int main() {
     for (int i = exp.size() - 1; i >= 0; i--) {//проход по всей строке слева направо
         if (isdigit(exp[i])) {//если цифра, то добавляем в стек
             int num = 0;
-            while (i >= 0 && isdigit(exp[i])) {
-                num = num * 10 + (exp[i] - '0');
+            string str = "";
+            while (isdigit(exp[i])) {
+                str += exp[i];
                 i--;  
             }
+            reverse(str.begin(), str.end());
+            num = stoi(str);
             i++;
             s.push(num);
            
