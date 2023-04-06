@@ -23,7 +23,6 @@ bool oper(std::string &exp) {//проверка на верную запись �
 int main() {
     using namespace std;
     string exp;
-    cout << "Enter prefix expression: ";
     while ( exp.size() < 3 || !oper(exp))//проверка ввода
     {
         system("CLS");
