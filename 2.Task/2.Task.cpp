@@ -11,14 +11,14 @@ int main() {
         if (isdigit(exp[i])) {//если цифра, то добавляем в стек
             int num = 0;
             string str = "";
-            while (isdigit(exp[i])) {
-                str += exp[i];
+            while (isdigit(exp[i])) {//проверка на цифру
+                str += exp[i];//запись цифры в строку 
                 i--;  
             }
-            reverse(str.begin(), str.end());
-            num = stoi(str);
+            reverse(str.begin(), str.end());//реверс строки
+            num = stoi(str);//преобразование string в int
             i++;
-            s.push(num);
+            s.push(num);//добавление в стек
            
         }
         else if (exp[i] == ' ') {//пропуск пробелов
