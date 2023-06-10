@@ -62,8 +62,6 @@ int main() {
     unsigned char cnt = 0, cnt1 = 0;//счетчики операнд и операций 
     string exp = "";
     bool flag = true;
-    cout << "Enter prefix expression: ";
-    getline(cin, exp);//считывание строки из потока 
     Stack* s;
     int menu = 0;
     while (menu > 2 || menu < 1) {
@@ -81,7 +79,9 @@ int main() {
         s = new ListStack(MAX_STACK_SIZE);
         system("cls");
     }
-
+    cin.ignore();
+    cout << "Enter prefix expression: ";
+    getline(cin, exp);//считывание строки из потока
     for (short i = exp.size() - 1; i >= 0; i--) {//проход по всей строке справа налево
         if (isdigit(exp[i])) {//если цифра, то добавляем в стек
             float num = 0;
